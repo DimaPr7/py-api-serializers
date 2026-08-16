@@ -54,6 +54,7 @@ class MovieListSerializer(serializers.ModelSerializer):
             for actor in obj.actors.all()
         ]
 
+
 class MovieDetailSerializer(serializers.ModelSerializer):
     genres = GenreSerializer(many=True, read_only=True)
     actors = ActorSerializer(many=True, read_only=True)
